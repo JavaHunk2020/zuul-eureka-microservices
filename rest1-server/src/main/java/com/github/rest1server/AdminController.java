@@ -7,6 +7,35 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+
+class Dog {
+	String name="tommy";
+	String color="red";
+	int price=199;
+	Dog(){
+		
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+}
+
 @RestController()
 @RequestMapping("/admin")
 public class AdminController {
@@ -14,6 +43,11 @@ public class AdminController {
     @GetMapping()
     public String hello() {
         return "Hello from Rest1";
+    }
+    
+    @GetMapping("/dog/{did}")
+    public Dog getDog(@PathVariable  int did) {
+    	return Dog();
     }
 
     @GetMapping("/page1")
