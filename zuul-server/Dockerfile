@@ -15,5 +15,5 @@ LABEL maintainer="technohunk444@gmail.com"
 RUN cp  target/zuul-server-0.0.1-SNAPSHOT.jar  zuul-server-0.0.1-SNAPSHOT.jar
 
 ENTRYPOINT ["java", "-jar", "zuul-server-0.0.1-SNAPSHOT.jar"]
-EXPOSE 8762
+EXPOSE 9494
 

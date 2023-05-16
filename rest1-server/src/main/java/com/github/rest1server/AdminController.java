@@ -47,7 +47,7 @@ public class AdminController {
     
     @GetMapping("/dog/{did}")
     public Dog getDog(@PathVariable  int did) {
-    	return Dog();
+    	return new Dog();
     }
 
     @GetMapping("/page1")
